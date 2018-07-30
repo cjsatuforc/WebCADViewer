@@ -18,6 +18,7 @@ Improvements are welcome.
 # How to run:
 python routes.py 
 
-Auhthor:
+# Contact:
 Hualin Xiao 
 dr.hualin.xiao@gmail.com
+hualin.xiao@psi.ch
