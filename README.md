@@ -22,3 +22,6 @@ python routes.py
 Hualin Xiao 
 dr.hualin.xiao@gmail.com
 hualin.xiao@psi.ch
+
+# Screenshot
+![Screenshot](screenshot.png)
