@@ -17,15 +17,16 @@ It should work in Linux.
 
 
 
-# Dependencies:
+# Installation
 
 - FreeCAD
   apt-get install FreeCAD
 - python libraries:
    pip install werkzeug, flask,numpy, Pyside
    
-# How to run:
+# Run:
 python routes.py 
+Open your web browser, upload a CAD file
 
 # Contact:
 Hualin Xiao 
