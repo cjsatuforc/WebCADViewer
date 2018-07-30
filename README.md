@@ -1,5 +1,5 @@
 # WebCADViewer
-A sever side web CAD file viewer based on Flask and FreeCAD.  
+A sever side web CAD file viewer using three.js, Flask and FreeCAD.  
 Supported CAD formats:
 'stp','step','STEP','STP','iv','iges','igs', 'FCstd','obj','ply','vrml','dae','poly','brep','brp','stl'
 It should work in Linux. 

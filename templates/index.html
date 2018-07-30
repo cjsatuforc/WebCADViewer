@@ -1,0 +1,139 @@
+<!DOCTYPE HTML><html>
+	<head>
+		<title>CadViewer</title>
+		<meta name='Author' content="Hualin Xiao- dr.hualin.xiao@gmail.com">
+		<meta name='Keywords' content="CadViewer">
+		<meta charset="utf-8">
+		<!--
+	  <script  src="{{ url_for('static', filename='vendor/js/three.min.js') }}"></script>
+	  <script  src="{{ url_for('static', filename='vendor/js/TrackballControls.js') }}"></script>
+	  <script  src="{{ url_for('static', filename='vendor/js/stats.min.js')}}"></script>
+	  <script  src="{{ url_for('static', filename='vendor/js/jquery-3.3.1.min.js')}}"></script>
+	  -->
+	  <script type="text/javascript" src="https://cdn.rawgit.com/mrdoob/three.js/r88/build/three.min.js"></script>
+	  <script type="text/javascript" src="https://cdn.rawgit.com/mrdoob/three.js/r88/examples/js/controls/TrackballControls.js"></script>
+	  <script type="text/javascript" src="https://cdn.rawgit.com/mrdoob/three.js/r88/examples/js/libs/stats.min.js"></script>
+	  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	  <script   src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+	  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css">
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	  <style type="text/css">
+body {
+	background:	#FFFcF5;
+	margin: 0px;
+	overflow: hidden;
+}
+
+		#leftbar{
+			list-style-type: none;
+			padding: 5px;
+			position: absolute;
+			left: 1%;
+			top: 5%;
+			width: 320px;
+			border-radius: 5px;
+			border: 2px solid #f7941e;
+			opacity: 0.7;
+			font-family: Arial;
+			background-color: #414042;
+			color: #ffffff;
+			font-size: 14px;
+			opacity: 0.5;
+			display:none;
+			height: 600px;
+			overflow:auto;
+
+		}
+		#statusbar{
+			position:fixed;
+			left: 1%;
+			bottom: 1%;
+			width: 300px;
+			border-radius: 5px;
+			border: 2px solid #f7941e;
+			opacity: 0.7;
+			font-family: Arial;
+			background-color: #414042;
+			color: #ffffff;
+			font-size: 14px;
+			opacity: 0.6;
+		}
+		.wrapper {
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+		#leftbar2{
+			min-width: 250px;
+			max-width: 250px;
+		}
+
+		#leftbar.active {
+			margin-left: -250px;
+		}
+		#commands {
+			padding: 5px;
+			position: absolute;
+			right: 1%;
+			top: 2%;
+			height: 65px;
+			width: 180px;
+			border-radius: 5px;
+			border: 2px solid #f7941e;
+			opacity: 0.7;
+			font-family: Arial;
+			background-color: #414042;
+			color: #ffffff;
+			font-size: 14px;
+			opacity: 0.5;
+		}
+		a {
+			color: #f7941e;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #ffffff;
+		}
+	  </style>
+	</head>
+
+	<body>
+			<div class="row">
+			<div class="col-xs-4">
+				<form method="post" action="#" id="uploadform" enctype="multipart/form-data">
+					<input type="file" name="file" id="file">
+					<input type="submit" value="Upload">
+				</form>
+			</div>
+				<div class="wrapper">
+
+			<div id="container">
+			</div>
+
+
+
+			<nav id="leftbar">
+
+
+			</nav>
+
+			<div id="statusbar"> </div>
+
+			<div id="commands">
+				<b>t</b> view/hide shape<br>
+				<b>w</b> toggle wireframe/shaded<br>
+				<b>g</b> view/hide grid<br>
+				<b>a</b> view/hide axis<br>
+			</div>
+			<br><br>
+			<script type="text/javascript" src="{{ url_for('static', filename='js/main.js')}}"></script>
+			<script type="text/javascript" src="{{ url_for('static', filename='js/my.js')}}"></script>
+			{% if view  %}
+			<script > var fuuid_view="{{fid}}"; </script>
+			{% endif %}
+
+
+	</body>
+</html>
